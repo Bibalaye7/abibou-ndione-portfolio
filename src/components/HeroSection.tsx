@@ -77,12 +77,9 @@ const HeroSection = () => {
               Je crée <RotatingWord />
             </m.p>
             <m.p variants={item} className="text-green-100/90 text-lg max-w-xl">{profile.tagline}</m.p>
-            <m.div variants={item} className="space-y-1 text-sm text-green-300">
-              <p className="flex items-start gap-2">
-                <MapPin className="mt-0.5 size-4 shrink-0" /> {profile.location}
-              </p>
-              <p className="pl-6">{profile.currentLocation}</p>
-            </m.div>
+            <m.p variants={item} className="flex items-center gap-2 text-sm text-green-300">
+              <MapPin className="size-4 shrink-0" /> {profile.location}
+            </m.p>
 
             <m.div variants={item} className="flex flex-wrap gap-4 pt-2">
               <m.a

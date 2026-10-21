@@ -6,8 +6,7 @@ export const profile = {
   role: 'Développeur Web et Mobile',
   tagline:
     'Je conçois des sites et applications web et mobile utiles, rapides et accessibles, avec une attention particulière pour les entreprises africaines.',
-  location: 'Thialane, Guérèo, Sindia, Thiès, Sénégal',
-  currentLocation: 'Dakar, Médina',
+  location: 'Dakar, Médina, Sénégal',
   email: 'ndioneabibou7@gmail.com',
   phones: ['+221 76 805 29 67', '+221 70 760 10 58'],
   // Chemin du CV placé dans public/ ; mettre null pour masquer le bouton

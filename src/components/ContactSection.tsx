@@ -62,10 +62,7 @@ const ContactSection = () => {
 
               <div className="flex gap-3">
                 <MapPin className="mt-0.5 size-5 shrink-0 text-brand" />
-                <div className="text-body">
-                  <p>{profile.location}</p>
-                  <p className="mt-1">{profile.currentLocation}</p>
-                </div>
+                <p className="text-body">{profile.location}</p>
               </div>
 
               <SocialLinks linkClassName="flex size-10 items-center justify-center rounded-full bg-brand text-brand-fg hover:bg-brand-hover" />
