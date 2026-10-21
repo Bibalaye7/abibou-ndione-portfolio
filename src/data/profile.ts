@@ -37,10 +37,9 @@ export const projects: Project[] = [
   {
     title: 'Africa Agro SEM',
     description:
-      "Site vitrine d'une entreprise agricole : présentation des services et des semences, accompagnement des agriculteurs africains.",
+      "Site d'une entreprise sénégalaise de semences certifiées : catalogue des semences, activités, traçabilité des lots et réservation en ligne.",
     tags: ['React', 'TypeScript', 'Vercel'],
-    image:
-      'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=70',
+    image: '/projets/africa-agro-sem.webp',
     liveUrl: 'https://africaagrosemsn.vercel.app',
   },
   {

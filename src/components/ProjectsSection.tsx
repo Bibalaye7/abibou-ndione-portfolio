@@ -21,14 +21,14 @@ const ProjectsSection = () => {
               className="group flex flex-col overflow-hidden rounded-xl border border-line bg-card-bg transition-all duration-500 hover:-translate-y-1 hover:border-brand hover:shadow-[0_20px_50px_rgba(22,163,74,0.15)]"
               delay={(index % 2) * 0.1}
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src={project.image}
                   alt={`Aperçu du projet ${project.title}`}
                   loading="lazy"
-                  className="size-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="size-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-green-950/30 transition-opacity duration-500 group-hover:opacity-0" />
+                <div className="absolute inset-0 bg-green-950/15 transition-opacity duration-500 group-hover:opacity-0" />
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-xl font-bold font-heading text-heading">{project.title}</h3>
