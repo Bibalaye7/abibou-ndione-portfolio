@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abibou Ndione — Développeur Web et Mobile</title>
+    <meta name="description" content="Portfolio d'Abibou Ndione, développeur web et mobile au Sénégal : projets React, TypeScript, Ionic, Angular et Java." />
+    <meta name="author" content="Abibou Ndione" />
+    <link rel="canonical" href="https://abibou-ndione-portfolio.vercel.app/" />
+    <meta name="theme-color" content="#14532d" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Applique le thème avant l'affichage pour éviter un flash en mode sombre
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || (!saved && matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+    <meta property="og:title" content="Abibou Ndione — Développeur Web et Mobile" />
+    <meta property="og:description" content="Portfolio d'Abibou Ndione, développeur web et mobile au Sénégal." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:image" content="https://abibou-ndione-portfolio.vercel.app/og-image.png" />
+    <meta property="og:url" content="https://abibou-ndione-portfolio.vercel.app/" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abibou Ndione — Développeur Web et Mobile" />
+    <meta name="twitter:image" content="https://abibou-ndione-portfolio.vercel.app/og-image.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
