@@ -1,9 +1,15 @@
-import { Award, BadgeCheck, FileText } from 'lucide-react';
+import { Award, BadgeCheck, Eye } from 'lucide-react';
 import { certifications, trainings } from '@/data/profile';
+import { useDocumentViewer } from './DocumentViewer';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
 
+const consultClass =
+  'inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:text-brand-hover hover:underline';
+
 const CertificationsSection = () => {
+  const { openDocument, viewer } = useDocumentViewer();
+
   return (
     <section id="certifications" className="section-padding bg-surface">
       <div className="container">
@@ -28,10 +34,10 @@ const CertificationsSection = () => {
                 <h3 className="mt-1 text-lg font-semibold text-heading">{cert.title}</h3>
                 <p className="mt-1 flex-1 text-sm text-body">{cert.issuer}</p>
                 <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm font-medium">
-                  {cert.proofUrl && (
-                    <a href={cert.proofUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-brand hover:text-brand-hover hover:underline">
-                      <FileText className="size-4" /> PDF
-                    </a>
+                  {cert.documentUrl && (
+                    <button type="button" onClick={() => openDocument({ src: cert.documentUrl!, title: cert.title })} className={consultClass}>
+                      <Eye className="size-4" /> Consulter
+                    </button>
                   )}
                   {cert.verifyUrl && (
                     <a href={cert.verifyUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-brand hover:text-brand-hover hover:underline">
@@ -54,22 +60,23 @@ const CertificationsSection = () => {
                   <p className="font-medium text-heading">{training.title}</p>
                   <p className="text-sm text-subtle">{training.issuer}</p>
                 </div>
-                {training.proofUrl && (
-                  <a
-                    href={training.proofUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Attestation PDF : ${training.title}`}
-                    className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-brand hover:text-brand-hover hover:underline"
+                {training.documentUrl && (
+                  <button
+                    type="button"
+                    onClick={() => openDocument({ src: training.documentUrl!, title: training.title })}
+                    aria-label={`Consulter l'attestation : ${training.title}`}
+                    className={`shrink-0 ${consultClass}`}
                   >
-                    <FileText className="size-4" /> Attestation
-                  </a>
+                    <Eye className="size-4" /> Consulter
+                  </button>
                 )}
               </li>
             ))}
           </ul>
         </Reveal>
       </div>
+
+      {viewer}
     </section>
   );
 };

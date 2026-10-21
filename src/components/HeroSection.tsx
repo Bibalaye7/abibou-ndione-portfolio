@@ -81,7 +81,7 @@ const HeroSection = () => {
               <p className="flex items-start gap-2">
                 <MapPin className="mt-0.5 size-4 shrink-0" /> {profile.location}
               </p>
-              <p className="pl-6 text-green-300/80">Actuellement à {profile.currentLocation}</p>
+              <p className="pl-6">{profile.currentLocation}</p>
             </m.div>
 
             <m.div variants={item} className="flex flex-wrap gap-4 pt-2">

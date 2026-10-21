@@ -64,7 +64,7 @@ const ContactSection = () => {
                 <MapPin className="mt-0.5 size-5 shrink-0 text-brand" />
                 <div className="text-body">
                   <p>{profile.location}</p>
-                  <p className="mt-1 text-sm text-subtle">Actuellement à {profile.currentLocation}</p>
+                  <p className="mt-1">{profile.currentLocation}</p>
                 </div>
               </div>
 

@@ -115,8 +115,9 @@ export interface Certification {
   title: string;
   issuer: string;
   date: string;
-  // Document complet ou page de vérification officielle
-  proofUrl?: string;
+  // Image du document, consultable sur le site mais pas proposée au téléchargement
+  documentUrl?: string;
+  // Page de vérification officielle
   verifyUrl?: string;
 }
 
@@ -126,14 +127,14 @@ export const certifications: Certification[] = [
     title: 'Elements of AI',
     issuer: 'University of Helsinki, Sorbonne Université & MinnaLearn',
     date: '10 septembre 2025',
-    proofUrl: '/certificats/elements-of-ai.pdf',
+    documentUrl: '/consultation/elements-of-ai.webp',
     verifyUrl: 'https://certificates.mooc.fi/validate/vh8oopy4vkk',
   },
   {
     title: 'Web Development Essentials',
     issuer: 'GOMYCODE — certificat de fin de formation',
     date: '28 février 2025',
-    proofUrl: '/certificats/gomycode-web-development-essentials.pdf',
+    documentUrl: '/consultation/gomycode-web-development-essentials.webp',
   },
 ];
 
@@ -141,7 +142,7 @@ export interface Training {
   title: string;
   issuer: string;
   date: string;
-  proofUrl?: string;
+  documentUrl?: string;
 }
 
 // Autres formations, affichées en liste simple (du plus récent au plus ancien)
@@ -150,31 +151,31 @@ export const trainings: Training[] = [
     title: 'Cyber Shield — Les fondamentaux de la cybersécurité',
     issuer: 'TECH-KI · Orange Digital Center',
     date: 'Août 2026',
-    proofUrl: '/certificats/techki-cyber-shield.pdf',
+    documentUrl: '/consultation/techki-cyber-shield.webp',
   },
   {
     title: 'Web Builder — Créer des sites web modernes (HTML, CSS, Bootstrap, JavaScript)',
     issuer: 'TECH-KI · Orange Digital Center',
     date: 'Août 2026',
-    proofUrl: '/certificats/techki-web-builder.pdf',
+    documentUrl: '/consultation/techki-web-builder.webp',
   },
   {
     title: "Vibe Coding Starter — Créer un projet web avec l'IA",
     issuer: 'TECH-KI · Orange Digital Center',
     date: 'Août 2026',
-    proofUrl: '/certificats/techki-vibe-coding-starter.pdf',
+    documentUrl: '/consultation/techki-vibe-coding-starter.webp',
   },
   {
     title: 'Project Master — Piloter un projet Agile',
     issuer: 'TECH-KI · Orange Digital Center',
     date: 'Août 2026',
-    proofUrl: '/certificats/techki-project-master-agile.pdf',
+    documentUrl: '/consultation/techki-project-master-agile.webp',
   },
   {
     title: 'Masterclass Conception graphique : créer son premier logo',
     issuer: 'GOMYCODE',
     date: '2026',
-    proofUrl: '/certificats/gomycode-masterclass-logo.pdf',
+    documentUrl: '/consultation/gomycode-masterclass-logo.webp',
   },
   {
     title: 'Créez votre site web avec HTML5 et CSS3',
