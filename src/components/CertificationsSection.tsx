@@ -19,11 +19,11 @@ const CertificationsSection = () => {
           intro="Mes certifications et les formations que j'ai suivies pour compléter mon cursus."
         />
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {certifications.map((cert, index) => (
             <Reveal
               key={cert.title}
-              delay={index * 0.1}
+              delay={(index % 3) * 0.1}
               className="flex gap-4 rounded-xl border border-line bg-card-bg p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand hover:shadow-[0_20px_50px_rgba(22,163,74,0.15)]"
             >
               <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-chip-bg text-brand">

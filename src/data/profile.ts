@@ -122,6 +122,12 @@ export interface Certification {
 // Certifications mises en avant
 export const certifications: Certification[] = [
   {
+    title: 'Créez un site e-commerce avec WordPress',
+    issuer: 'Xarala Academy — attestation de formation',
+    date: '4 mars 2026',
+    documentUrl: '/consultation/xarala-ecommerce-wordpress.webp',
+  },
+  {
     title: 'Elements of AI',
     issuer: 'University of Helsinki, Sorbonne Université & MinnaLearn',
     date: '10 septembre 2025',
